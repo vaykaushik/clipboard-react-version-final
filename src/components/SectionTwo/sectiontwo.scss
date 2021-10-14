@@ -1,0 +1,20 @@
+@import '../../globals.scss';
+
+.section__two {
+    @include componentDefault;
+    margin-top: 13rem;
+
+    @media screen and (max-width: 468px) {
+        margin-top: 50rem;
+    }
+
+    .section__two__intro {
+        @include sectionTextDefault;
+        margin-top: 15rem;
+    }
+
+    .section__two__image {
+        @include defaultImg;
+        margin-top: 8rem;
+    }
+}

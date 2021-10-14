@@ -1,0 +1,121 @@
+// ---------- VARIABLES ---------- //
+
+// Primary Colours 
+
+$strong-cyan: hsl(171, 66%, 44%);
+$light-blue: hsl(233, 100%, 69%);
+
+// Neutral Colours
+
+$dark-greyish-blue: hsl(210, 10%, 33%);
+$greyish-blue: hsl(201, 11%, 66%);
+
+// Typography
+
+$font-weight-light: 400;
+$font-weight-bold: 600;
+
+// Space Between Sections
+
+$margin-bottom: 1rem;
+$margin-top: 1.5rem;
+
+// Button Padding & Margin
+
+$button-padding: .8rem 1.75rem;
+$button-margin: 0.5rem;
+
+// Titles & Paragraphs Padding
+
+$text-padding: 0 16%;
+
+// Image Responsiveness
+
+$width: 1rem;
+
+// Line height
+
+$line-height: 1.5;
+
+// ********** MIXINS ********** //
+
+@mixin componentDefault {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+}
+
+@mixin headingColor {
+    color: $dark-greyish-blue;
+}
+
+@mixin copyColor {
+    color: $greyish-blue;
+}
+
+// * Section Intro Text * //
+
+@mixin sectionTextDefault {
+    position: absolute;
+    inset: 0;
+
+    @media screen and (max-width: 1200px) {
+        margin: 0 10%;
+    }
+
+    @media screen and (min-width: 469px) {
+        margin: 0 28%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        @include headingColor;
+        font-weight: $font-weight-bold;
+    }
+
+    p {
+        margin-top: 0.7rem;
+        @include copyColor;
+        font-size: 1rem;
+    }
+}
+
+// Images //
+
+@mixin defaultImg {
+    @media screen and (max-width: 468px) {
+        img {
+            display: block;
+            position: absolute;
+            max-width: 80%;
+            inset: 0;
+            margin: auto;
+            top: 19rem;
+        }
+    }
+}
+
+// Buttons //
+
+@mixin buttonHoverIOS {
+    transition: background-color 150ms ease-in-out;
+    &:hover {
+        background-color: hsl(171, 66%, 47%);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+@mixin buttonHoverAndroid {
+    transition: background-color 150ms ease-in-out;
+    &:hover {
+        background-color: hsl(233, 100%, 72%);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}

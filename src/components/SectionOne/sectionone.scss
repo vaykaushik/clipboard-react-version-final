@@ -1,0 +1,106 @@
+@import '../../globals.scss';
+
+.section__one {
+
+    z-index: 99;
+
+    @include componentDefault;
+
+    @media screen and (max-width: 1200px) {
+        margin-top: 10rem;
+    }
+
+    .section__one__intro {
+
+        position: absolute;
+        inset: 0;
+
+        @media screen and (max-width: 1200px) {
+            margin: 0 10%;
+        }
+
+        @media screen and (min-width: 469px) {
+            margin: 0 28%;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            @include headingColor;
+            font-weight: $font-weight-bold;
+        }
+
+        p {
+            margin-top: 0.7rem;
+            @include copyColor;
+            font-size: 1rem;
+        }
+    }
+
+    .section__one__container {
+        display: block;
+        width: 100%;
+    }
+
+    .section__one__left,
+    .section__one__right {
+        margin-top: 13rem;
+    }
+
+    .section__one__left {
+
+        .computerImage {
+            display: block;
+            position: absolute;
+            max-width: 100%;
+            top: 10rem;
+            right: 50%;
+        }
+
+        @media screen and (max-width: 468px) {
+            .computerImage {
+                display: block;
+                position: absolute;
+                max-width: 80%;
+                inset: 0;
+                margin: auto;
+                top: 23rem;
+            }
+        }
+    }
+
+    .section__one__right {
+
+        text-align: left;
+        padding-left: 55%;
+        margin-right: 21%;
+        margin-top: 13.75rem;
+        
+        h2 {
+            @include headingColor;
+        }
+
+        p {
+            @include copyColor;
+            padding-bottom: 3.25rem;
+            margin-top: 0.5rem;
+        }
+
+        @media screen and (max-width: 468px) {
+            display: block;
+            position: absolute;
+            margin: 0;
+            padding: 0 10%;
+            top: 33rem;
+            text-align: center;
+
+            h2 {
+                font-weight: $font-weight-bold;
+            }
+
+            p {
+                padding-bottom: 2.125rem;
+                font-weight: $font-weight-light;
+            }
+        }
+    }
+}

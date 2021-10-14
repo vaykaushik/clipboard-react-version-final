@@ -1,0 +1,78 @@
+@import '../../globals.scss';
+
+.header {
+
+    @include componentDefault;
+    height: 30rem;
+    flex-direction: column;
+
+    .header__background--desktop {
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        object-fit: cover;
+        z-index: -1;
+
+        @media screen and (max-width: 968px) {
+            display: none;
+        }
+    }
+
+    .header__background--mobile {
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        object-fit: cover;
+        z-index: 1;
+
+        @media screen and (min-width: 967px) {
+            display: none;
+        }
+    }
+
+    .logo {
+        max-width: 85px;
+        width: 100%;
+        max-height: 85px;
+        height: 100%;
+        margin-bottom: $margin-bottom;
+
+        @media screen and (max-width: 1200px) {
+            width: 100px;
+            height: 100px;
+            margin-top: 10rem;
+        }
+    }
+
+    .header__info {
+        
+        margin-top: $margin-top;
+        line-height: $line-height;
+
+        .header__title {
+            color: $dark-greyish-blue;
+            font-weight: $font-weight-bold;
+            font-size: 1.5vw;
+
+            @media screen and (max-width: 2500px) {
+                font-size: 2rem;
+                padding: 0 6%;
+            }
+        }
+
+        .header__copy {
+            color: $greyish-blue;
+            font-weight: $font-weight-light;
+            padding: $text-padding;
+            margin-top: 0.7rem;
+            font-size: 1.1rem;
+            padding-bottom: 1rem;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 1rem;
+                padding-bottom: 1rem;
+                padding: 0 9%;
+            }
+        }
+    }
+}

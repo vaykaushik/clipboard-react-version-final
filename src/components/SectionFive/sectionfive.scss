@@ -1,0 +1,39 @@
+@import '../../globals.scss';
+
+.section__five {
+    @include componentDefault;
+    margin-top: 9rem;
+
+    @media screen and (max-width: 468px) {
+        margin-top: 6rem;
+    }
+
+    h2 {
+        @include headingColor;
+        padding-bottom: 0.75rem;
+
+        @media screen and (max-width: 468px) {
+            margin: 0 15%;
+        }
+    }
+
+    p {
+        @include copyColor;
+        margin: 0 18%;
+
+        @media screen and (max-width: 468px) {
+            margin: 0 9.5%;
+        }
+    }
+
+    .section__five__intro {
+
+        p {
+            padding-bottom: 1rem;
+        }
+
+        .section__five__button {
+            margin-top: 10rem;
+        }
+    }
+}

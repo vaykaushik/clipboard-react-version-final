@@ -1,0 +1,48 @@
+@import '../../globals.scss';
+
+.header__buttons {
+
+    margin-top: $margin-top;
+    width: 100%;
+
+    button {
+        cursor: pointer;
+        display: inline-block;
+        padding: $button-padding;
+        margin: $button-margin;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-family: inherit;
+        font-weight: $font-weight-bold;
+
+        @media screen and (max-width: 1200px) {
+            display: block;
+            margin: 1rem auto;
+            width: 85%;
+            padding: 0.85rem 0;
+            font-weight: 600;
+        }
+    }
+
+    .header__button--green {
+        cursor: pointer;
+        border: none;
+        background-color: $strong-cyan;
+        color: #fff;
+        font-weight: 400;
+        box-shadow: inset 0px -3.5px 0px 0px hsl(171, 66%, 41%),
+            0 0 20px -7px hsl(171, 66%, 44%);
+        @include buttonHoverIOS;
+    }
+
+    .header__button--blue {
+        cursor: pointer;
+        border: none;
+        background-color: $light-blue;
+        color: #fff;
+        font-weight: 400;
+        box-shadow: inset 0px -3.5px 0px 0px hsl(233, 100%, 66%),
+            0 0 20px -10px hsl(233, 100%, 69%);
+        @include buttonHoverAndroid;
+    }
+}
